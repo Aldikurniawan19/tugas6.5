@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../get_started/get_started_screen.dart'; // Import halaman Get Started
+import '../get_started/get_started_screen.dart'; 
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
@@ -20,7 +20,6 @@ class SettingsScreen extends StatelessWidget {
         child: Column(
           children: [
             const SizedBox(height: 20),
-            // Contoh Menu Setting Lainnya (Opsional)
             _buildSettingItem(
               icon: Icons.person_outline,
               title: 'Account Profile',
@@ -32,26 +31,24 @@ class SettingsScreen extends StatelessWidget {
               onTap: () {},
             ),
 
-            const Spacer(), // Mendorong tombol logout ke bawah
-            // Tombol Logout
+            const Spacer(), 
             Container(
               margin: const EdgeInsets.only(bottom: 32),
               decoration: BoxDecoration(
                 color: Colors.red.withOpacity(
                   0.05,
-                ), // Background merah sangat halus
+                ), 
                 borderRadius: BorderRadius.circular(12),
               ),
               child: ListTile(
                 onTap: () {
-                  // Logika Navigasi Logout
                   Navigator.pushAndRemoveUntil(
                     context,
                     MaterialPageRoute(
                       builder: (context) => const GetStartedScreen(),
                     ),
                     (route) =>
-                        false, // Menghapus semua riwayat halaman sebelumnya
+                        false, 
                   );
                 },
                 leading: const Icon(Icons.logout, color: Colors.redAccent),
@@ -73,7 +70,6 @@ class SettingsScreen extends StatelessWidget {
     );
   }
 
-  // Helper widget untuk item setting agar kode lebih rapi
   Widget _buildSettingItem({
     required IconData icon,
     required String title,

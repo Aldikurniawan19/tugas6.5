@@ -36,14 +36,14 @@ class GetStartedScreen extends StatelessWidget {
               const Spacer(),
               SizedBox(
                 width: double.infinity,
-                height: 56, // Tinggi tombol yang nyaman ditekan
+                height: 56, 
                 child: ElevatedButton(
                   onPressed: () {
                     Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
                         builder: (context) =>
-                            const MainScreen(), // Arahkan ke MainScreen
+                            const MainScreen(), 
                       ),
                     );
                   },
@@ -54,7 +54,7 @@ class GetStartedScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(12),
                     ),
                     elevation:
-                        0, // Menghilangkan shadow untuk kesan flat/minimalis
+                        0, 
                   ),
                   child: const Text(
                     'Get Started',

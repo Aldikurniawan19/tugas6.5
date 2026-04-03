@@ -31,35 +31,34 @@ class _MainScreenState extends State<MainScreen> {
       backgroundColor: Colors.white,
       body: _pages[_selectedIndex],
 
-      // Desain Bottom Navbar Minimalis dengan Shadow Halus
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
-          color: Colors.white, // Warna background navbar
+          color: Colors.white, 
           boxShadow: [
             BoxShadow(
               color: Colors.black.withOpacity(
                 0.04,
-              ), // Shadow sangat tipis agar tetap elegan
+              ), 
               blurRadius: 20,
-              offset: const Offset(0, -4), // Arah shadow ke atas
+              offset: const Offset(0, -4), 
             ),
           ],
         ),
         child: SafeArea(
-          // SafeArea memastikan navbar tidak tertutup indikator gestur di HP modern
+
           child: Padding(
             padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
             child: BottomNavigationBar(
               elevation:
-                  0, // Matikan elevation bawaan, gunakan shadow dari Container
-              backgroundColor: Colors.transparent, // Ikuti warna dari Container
+                  0, 
+              backgroundColor: Colors.transparent,
               iconSize:
-                  30, // <-- Ukuran ikon diperbesar (default bawaan adalah 24)
+                  30, 
               currentIndex: _selectedIndex,
               onTap: _onItemTapped,
-              selectedItemColor: Colors.black, // Warna ikon aktif
+              selectedItemColor: Colors.black, 
               unselectedItemColor:
-                  Colors.grey[350], // Warna ikon tidak aktif (abu-abu terang)
+                  Colors.grey[350], 
               showSelectedLabels: false,
               showUnselectedLabels: false,
               type: BottomNavigationBarType.fixed,
